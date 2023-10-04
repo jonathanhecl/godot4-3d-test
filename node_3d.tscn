@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://br43nbjwfhff2"]
+
+[ext_resource type="PackedScene" uid="uid://bwvgoajmq2dky" path="res://snowman.tscn" id="1_ob8q6"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Snowman" parent="." instance=ExtResource("1_ob8q6")]
