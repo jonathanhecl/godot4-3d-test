@@ -1,7 +1,32 @@
-[gd_scene load_steps=2 format=3 uid="uid://br43nbjwfhff2"]
+[gd_scene load_steps=3 format=3 uid="uid://br43nbjwfhff2"]
 
 [ext_resource type="PackedScene" uid="uid://bwvgoajmq2dky" path="res://snowman.tscn" id="1_ob8q6"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_42tfn"]
 
 [node name="Node3D" type="Node3D"]
 
 [node name="Snowman" parent="." instance=ExtResource("1_ob8q6")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(4.88654, 0, 0, 0, 1, 0, 0, 0, 4.08149, 0, -0.33359, 0)
+mesh = SubResource("PlaneMesh_42tfn")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.999596, 0.0262974, 0.0107383, -0.0171022, 0.255329, 0.966703, 0.0226799, -0.966497, 0.255676, 0, 1.89207, 0)
+visible = false
+light_color = Color(0.298039, 0.298039, 0.298039, 1)
+light_energy = 0.5
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.28874, 0.650712, 0)
+light_color = Color(0.960784, 0.0784314, 0.415686, 1)
+light_energy = 7.95
+shadow_enabled = true
+omni_range = 2.0
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.821184, 0, 1.89776)
+light_color = Color(0.4, 0.505882, 0.988235, 1)
+light_energy = 2.374
+shadow_enabled = true
