@@ -6,6 +6,9 @@
 
 [node name="Node3D" type="Node3D"]
 
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.950179, 0.311705, 0, -0.311705, 0.950179, 0.31512, 1.40722, 3.1494)
+
 [node name="Snowman" parent="." instance=ExtResource("1_ob8q6")]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
@@ -14,7 +17,6 @@ mesh = SubResource("PlaneMesh_42tfn")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.999596, 0.0262974, 0.0107383, -0.0171022, 0.255329, 0.966703, 0.0226799, -0.966497, 0.255676, 0, 1.89207, 0)
-visible = false
 light_color = Color(0.298039, 0.298039, 0.298039, 1)
 light_energy = 0.5
 
